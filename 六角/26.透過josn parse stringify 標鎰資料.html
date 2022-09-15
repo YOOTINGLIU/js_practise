@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<tml lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>便當的首頁</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+
+    <script >
+        // 將array轉為string 
+        // 將string 轉為array
+
+        var country =[
+            {farmer:'卡斯柏'}
+        ];
+
+        // JSON.stringify()將陣列資料字串化;
+        var countrystring = JSON.stringify(country);
+        console.log(countrystring)
+
+        localStorage.setItem('countryItem',countrystring);
+        var getdata =localStorage.getItem('countryItem');
+        // JSON.parse()將字串ARRAY化
+        var getdataarray=JSON.parse(getdata);
+        console.log(getdataarray[0].farmer);
+        
+        // console.log( getdata[0].farmer);
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+image {
+	max-width: 100%;
+	height: auto;
+}
+
+/* 以上是REST */
+.wrap {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.header {
+	background-image: url(/js-finallyHomework/assets/the-urban-landscape-1698285.png);
+	background-size: cover;
+	height: 762px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-menu {
+	text-align: center;
+	line-height: 5em;
+	width: 500px;
+}
+
+.header-menu h1 {
+	color: #fff;
+	font-size: 75px;
+	font-weight: bold;
+	padding-top: 20px;
+	padding-bottom: 80px;
+}
+
+.select {
+	width: 450px;
+	height: 1.8em;
+	border: 2px #fff solid;
+	font-size: 40px;
+	background: #fff;
+	opacity:0.5;
+	border-radius: 5px;
+}
+.popular-areas{
+	position: relative;
+	background: #fff;
+	width: 500px;
+	height: 100px;
+	line-height: 2em;
+	justify-content: space-between;
+	border: 1px gray solid;
+	top: -30px;
+	left: 350px;
+	padding: 20px;
+	border-radius: 5px;
+}
+.popular-areas h3{
+	font-weight: bold;
+	font-size: 25px;
+}
+.areas{
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	color: #fff;
+	padding-top: 20px;
+}
+
+.areas-1{
+	width: 80px;
+	border-radius: 3px;
+	background: #8a82cc;
+}
+.areas-2{
+	width: 80px;
+	border-radius: 3px;
+	background: #ffa782;
+}
+
+.areas-3{
+	width: 80px;
+	border-radius: 3px;
+	background: #f5d005;
+}
+.areas-4{
+	width: 80px;
+	border-radius: 3px;
+	background: #559ac8;
+}
+
+
+.footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	line-height: 2em;
+	background: #559ac8;
+	height: 120px;
+}
+.footer h4{
+	color: #fff;
+	font-size: 25px;
+	
+}
+.footer p{
+	padding-top: 20px;
+	color: #fbd267;
+	font-size: 25px;
+	
+}

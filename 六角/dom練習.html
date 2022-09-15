@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="content">這是練習用</h1>
+    <div id="">看屁阿</div>
+    <br>
+    <button onclick="change()">按我!!!</button>
+
+    <script>
+        var contentchange = document.querySelector("#content");
+        function change(){
+            
+            console.log(contentchange);
+            contentchange.innerHTML="點屁阿 幹";
+            var str=document.createElement("h3");
+            str.textContent="在點啊 幹";
+            console.log(str);
+            contentchange.append(str);
+
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="list" style="padding: 50px; background-color: #000;color: #fff;">
+        
+    </ul>
+    
+    <script>
+        var country=[
+            {farmer:'卡斯柏'
+        },
+            {farmer:'查理'
+        },
+        ]
+        var list =document.querySelector('.list');
+        // 更新農場資料
+        function updataList(){
+            var str = '';
+            var len = country.length;
+            for(var i=0;i<len;i++){
+                str+='<li data-num="'+i+'">'+country[i].farmer+'</li>';
+            }
+            list.innerHTML=str;
+        }
+        updataList();
+        function checkList(e){
+            // console.log(e.target.nodeName);
+            var num =e.target.nodeName;
+
+            if(num!=="LI"){return};
+            var str = e.target.dataset.num
+            console.log('你現在選擇的農夫是'+country[str].farmer);
+        }
+
+        list.addEventListener('click',checkList,false);
+
+
+    </script>
+
+</body>
+</html>

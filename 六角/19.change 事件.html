@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>便當的首頁</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <select name="" id="areaid">
+        <option value="前鎮區">前鎮區</option>
+        <option value="林雅區">林雅區</option>
+    </select>
+    <ul class="list"></ul>
+
+    <script >
+var area=document.getElementById('areaid');
+var list = document.querySelector('.list');
+
+var country=[
+    {
+        farmer:'查理',
+        place:'前鎮區',
+    },
+    {
+        farmer:'卡斯柏',
+        place:'林雅區',
+    },
+    {
+        farmer:'小花',
+        place:'林雅區',
+    },
+];
+var len = country.length;
+console.log(len)
+function updatelist(e){
+    var select=e.target.value;
+    console.log(select);
+    var str='';
+    for(var i=0;len>i;i++){
+        // console.log(country[i].farmer);
+        if(select == country[i].place){
+            str+='<li>'+country[i].farmer+'</li>';
+            }
+        
+    }    
+
+    list.innerHTML=str;
+}
+
+area.addEventListener("change",updatelist,false);
+
+
+
+
+    </script>
+
+</body>
+</html>

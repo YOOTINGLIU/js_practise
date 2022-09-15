@@ -1,0 +1,127 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+li{
+	color: #37523d;
+	font-size: 25px;
+}
+h2{
+	color: #37523d;
+	font-size: 25px;
+}
+
+.warp{
+	width: 950px;
+	margin: 0 auto;
+	padding: 5px;
+	display: flex;
+}
+.menu{
+	width: 300px;
+
+	
+}
+.menu-top{
+	height: 70px;
+	background: #37523d;
+	color: #fff;
+	font-size: 25px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+.top{
+	background: #e7eeea;
+}
+.menu li{
+	height: 68px;
+	border: 1px solid #e7eeea;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.content{
+	display: flex;
+	flex-wrap: wrap;
+}
+.items{
+	padding-left: 20px;
+	margin-bottom: 18px;
+}
+/* img圖片和ul之間還有1PX的空格 要如何消除? */
+
+
+/* items ul 除了設下寬度 還有更好的方式分配位置嗎? */
+.items ul{
+	display: flex;
+	border: 1px solid #e7eeea;
+}
+.items li{
+	height: 63px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.box{
+	width: 183px;
+	border-right: 1px solid #e7eeea;
+}
+.box1{
+	width: 114px;
+}
+.container{
+	height: 85px;
+	background: #e7eeea;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+}

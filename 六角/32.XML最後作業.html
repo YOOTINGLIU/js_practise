@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>便當的首頁</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    請輸入帳號:<input type="text" class="email">
+    <br>
+    請輸入密碼:<input type="password" class="password">
+    <br>
+    <button class="signup">註冊</button>
+    <button class="signin">登入</button>
+
+<script>
+    // dom
+    var signup = document.querySelector('.signup');
+    var signin = document.querySelector('.signin');
+
+  // 事件監聽
+    signup.addEventListener('click',signup_data);
+    signin.addEventListener('click',signin_data);
+    
+    
+// 註冊帳號    
+function signup_data(){
+    xhr=new XMLHttpRequest();
+    xhr.open('post','https://hexschool-tutorial.herokuapp.com/api/signup',true);
+    // var Data= sendData();xhr.setRequestHeader('Content-type','application/json');
+    xhr.setRequestHeader('Content-type','application/json');
+    xhr.send(sendData());
+    xhr.onload=function(){
+        var str= JSON.parse(xhr.responseText);
+        var backInformation=str.message; 
+        if(backInformation=='帳號註冊成功'){
+            alert('帳號註冊成功');
+        }
+        else if (backInformation=='此帳號已被使用'){
+            alert('此帳號已被使用');
+        }
+        else {
+            alert('Email 格式不正確 請重新輸入');
+        }
+        console.log(backInformation);
+    }
+}
+// 登入帳號
+function signin_data(){
+    xhr=new XMLHttpRequest();
+    xhr.open('post','https://hexschool-tutorial.herokuapp.com/api/signin',true);
+    xhr.setRequestHeader('Content-type','application/json');
+    xhr.send(sendData());
+    xhr.onload=function(){
+        var str= JSON.parse(xhr.responseText);
+        var backInformation=str.message; 
+        if(backInformation=='登入成功'){
+            alert('登入成功');
+        }
+        else {
+            alert('此帳號不存在或帳號密碼錯誤');
+        }
+        // console.log(backInformation);
+    }
+
+}
+
+// a123456@gmail.com & 123456
+
+// 抓取帳號密碼
+function sendData(){
+    var email=document.querySelector(".email").value;
+    var password=document.querySelector(".password").value;
+    var account={};
+    account.email=email;
+    account.password=password;
+    var str = JSON.stringify(account);
+    return str;
+}
+
+
+</script>
+</body>
+
+
+
+</html>

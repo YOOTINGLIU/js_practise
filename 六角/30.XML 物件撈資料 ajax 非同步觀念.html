@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>便當的首頁</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1 class="main">123</h1>
+
+
+    <script>
+        var main = document.querySelector('.main');
+
+        var xhr = new XMLHttpRequest();
+        // readyState
+        // 0 已經產生一個XMLHttpRequest，但是還沒有連結你要的資料
+        // 1 你用了OPEN但是還沒有把資料傳送過去
+        // 2 偵測到你有用SEND
+        // 3 讀取中
+        // 4 你撈到資料了 數據已經完全接受到了
+
+        //    格式 要讀取的網址 同步與非同步
+        // 格式:get (讀取資料) 、post(傳送資料到伺服器)
+
+        // true 非同步，不會等資料回傳回來，就讓程式繼續往下跑，等到回傳才會自動回傳
+        // false 他會等資料回傳才會繼續往下跑
+        xhr.open('get', 'https://api.kcg.gov.tw/api/service/get/9c8e1450-e833-499c-8320-29b36b7ace5c', true);
+        xhr.send(null);
+        // https://api.kcg.gov.tw/api/service/get/9c8e1450-e833-499c-8320-29b36b7ace5c  高雄旅遊API
+        // console.log(xhr.responseText);    
+        // https://hexschool.github.io/ajaxHomework/data.json 六腳練習API
+
+        // 讀取完之後執行FUN
+        xhr.onload = function () {
+            // console.log(xhr.responseText);
+            // main.textContent=str[0].name;
+            // console.log(tt[0]);
+            
+            var str = JSON.parse(xhr.responseText);
+            
+            var tt=str.data.XML_Head.Infos.Info;
+            str= JSON.stringify(str);
+            // console.log(str);
+            console.log(tt[25]); 
+            return tt;
+        }
+        
+
+    </script>
+
+</body>
+
+</html>

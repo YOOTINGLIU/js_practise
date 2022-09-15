@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+    <script>
+
+        var el =document.querySelector('.box');
+        // false (事件氣泡-event bubbling) -從指定元素往外走
+        // true  (事件捕捉-event capturing) -從最外層往裡走
+        el.addEventListener('click',function(e){
+            e.stopPropagation();
+            alert("box");
+            console.log('box');
+        },false,stop)
+
+        var elbody =document.querySelector('body');
+        elbody.addEventListener('click',function(){
+            alert("你沒有點到box");
+            console.log('你沒有點到box');
+        },false)
+    </script>
+</body>
+</html>

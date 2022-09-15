@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>請輸入你的姓名</h2>
+    <input type="text" class="textclass">
+    <input type="button" class="btnclass" value="點擊">
+    <input type="button" class="btncall" value="叫出名字">
+
+    <script>
+        // var name = document.querySelector('.textclass');
+
+        var btn = document.querySelector('.btnclass');
+        var call =document.querySelector('.btncall')
+
+        call.addEventListener('click',function(e){
+            var str = localStorage.getItem('myname');
+            alert(str);
+            console.log (localStorage.getItem('myname'));
+
+        },false)
+
+        function savename(e) {
+            var str = document.querySelector('.textclass').value;
+            console.log(str);
+            localStorage.setItem('myname', str);
+
+        }
+        btn.addEventListener('click', savename, false);
+
+
+        // var str = 'tom';
+
+        
+        // localStorage.setItem('myname',str);
+
+        // console.log (localStorage.getItem('myname'));
+    </script>
+</body>
+
+</html>

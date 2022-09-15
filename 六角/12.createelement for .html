@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>便當的首頁</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>每個農場農夫名字</h1>
+    <ul class="list"></ul>
+
+    <script>
+
+        var farm = [
+            {
+                farmer: '卡斯柏',
+                dogs: ['捷克', '波士'],
+            },
+            {
+                farmer: '查理',
+                dogs: ['張母是', '皮皮'],
+            },
+            {
+                farmer: '約翰',
+                dogs: ['波波', '糯米'],
+            },
+        ]
+
+        var el = document.querySelector('.list');
+        var farmtotal = farm.length;
+        for (var i = 0; i < farmtotal; i++) {
+            var str = document.createElement('li');
+            console.log(farm[i].farmer);
+            str.textContent = farm[i].farmer;
+            console.log(str);
+            el.appendChild(str);
+        }
+
+    </script>
+
+</body>
+
+</html>

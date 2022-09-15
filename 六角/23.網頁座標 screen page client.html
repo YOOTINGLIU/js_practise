@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>便當的首頁</title>
+    <link rel="stylesheet" href="">
+    <style>
+        html{
+            height: 100%;
+        }
+        .wrap{
+            max-width: 1920px;
+            height: 4800px;
+            width: 100%;
+            background: gray;
+        }
+        .header{
+            height: 100px;
+            position: fixed;
+            /* margin: 0 auto; */
+            width: 100%;
+            display: flex;
+            top: 0px;
+            flex-direction: column;
+            /* justify-content:center ; */
+            align-items: center;
+            background: green;
+            line-height: 0px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="body">
+        <div class="wrap">
+            <div class="header">
+                <p>
+                    screenX <span class="screenX"></span>
+                    screenY <span class="screenY"></span>
+                </p>
+                <p>
+                    pageX <span class="pageX"></span>
+                    pageY <span class="pageY"></span>
+                </p>
+                <p>
+                    clientX <span class="clientX"></span>
+                    clientY <span class="clientY"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script >
+    var screenX=document.querySelector('.screenX');
+    var screenY=document.querySelector('.screenY');
+    var pageX=document.querySelector('.pageX');
+    var pageY=document.querySelector('.pageY');
+    var clientX=document.querySelector('.clientX');
+    var clientY=document.querySelector('.clientY');
+
+
+    function getposition(e){
+        screenX.textContent = e.screenX;
+        screenY.textContent = e.screenY;
+        pageX.textContent = e.pageX;
+        pageY.textContent = e.pageY;
+        clientX.textContent = e.clientX;
+        clientY.textContent = e.clientY;
+
+    }
+
+    var el = document.body;
+    el.addEventListener('mousemove',getposition,false)
+
+
+
+    </script>
+
+</body>
+</html>

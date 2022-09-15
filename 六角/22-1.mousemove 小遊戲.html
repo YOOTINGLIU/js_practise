@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>便當的首頁</title>
+    <link rel="stylesheet" href="">
+    <style>
+        .box{
+            background: green;
+            height: 15px;
+            width: 15px;
+            position: absolute;
+        }
+        .box1{
+            left: 20px;
+            top:0px;
+            animation: move 2s infinite;
+        }
+        .box2{
+            left: 70px;
+            top:0px;
+            animation: move 3s infinite;
+        }
+        .box3{
+            left: 120px;
+            top:0px;
+            animation: move 5s infinite;
+        }
+        .box4{
+            left: 170px;
+            top:0px;
+            animation: move 6s infinite;
+        }
+        .box5{
+            left: 220px;
+            top:0px;
+            animation: move 9s infinite;
+        }
+        .box6{
+            left: 270px;
+            top:0px;
+            animation: move 9s infinite;
+        }
+
+        @keyframes move{
+            0%{top:0px}
+            50%{top:310px}
+            100%{top:0px}
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+    <div class="box box6"></div>    
+    <script >
+        var el = document.querySelectorAll('.box');
+        var len=el.length;
+        for(var i=0;i<len;i++){
+            el[i].addEventListener('mousemove',function(e){
+                alert('you lose');
+            },false)
+        }
+
+
+    </script>
+
+</body>
+</html>
